@@ -4,24 +4,86 @@
     <meta charset="UTF-8" />
     <title>Matthew Jett</title>
     
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- For RWD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Normalize -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	
+	<!-- My Styles -->
+	<link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <h1>Matthew Jett</h1>
-  
-    <img class="profile-image" src="img/WIN_20170109_10_50_03_Pro.jpg" alt="" />
 
-    <h3>BIO</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa commodi explicabo fugit veritatis reprehenderit, sunt unde voluptatum accusamus quos ut fugiat quia soluta necessitatibus temporibus recusandae id voluptatem praesentium, labore.</p>
-    
-    <ul>
-        <li><a href="http://">title movie</a></li>
-        <li><a href="http://">title movie</a></li>
-        <li><a href="http://">title movie</a></li>
-    </ul>
-    
-    <h2>Resume</h2>
-    
-    
-</body>
+<main>
+	<header>
+		<h1>Matt Jett</h1>
+	</header>
+	
+	<body>
+		<!-- Background Image -->
+		<article>
+			<section>
+				<img src="" alt="">
+			</section>			
+		</article>
+		
+		<!-- Part I (bio + resume) -->
+		<article>
+			<section>
+				<h2>Who Am I?</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque a fugiat tempore obcaecati inventore enim repellat iusto debitis perspiciatis dolorum rerum et, cumque, fugit quae! Voluptatem, recusandae hic eos inventore.</p>
+			</section>
+
+			<section>
+				<h2>What Have I Done?</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci reiciendis iste, modi dignissimos reprehenderit alias. Autem tempore, hic voluptas ducimus placeat, illo repellendus consequuntur, excepturi corporis harum adipisci sunt!</p>
+			</section>
+		</article>
+		
+		<!-- Part II (afterwards) -->
+		<article>
+			<section>
+				<h2>Where to Now?</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste eligendi in, saepe quae illum, inventore hic temporibus soluta fuga ex corporis magnam. Consectetur officiis et quas suscipit consequuntur odit incidunt?</p>
+			</section>
+		</article>
+		
+		<!-- Navigation -->
+		<aside>
+			<nav>
+				<ul>
+					<!-- top of home page -->
+					<li><a href="index.html">Who?</a></li>
+					<!-- left middle of home page -->
+					<li><a href="bio.html">What?</a></li>
+					<!-- right middle of home page -->
+					<li><a href="goals.html">Where?</a></li>
+					<!-- link to portfolio page -->
+					<li><a href="portfolio.html">Why?</a></li>
+					<!-- bottom of home page -->
+					<li><a href="contact.html">When?</a></li>
+				</ul>
+			</nav>
+		</aside>
+		
+		<!-- Contact Form -->
+		<aside>
+			<section>
+				<form action="https://formspree.io/matthew.jett@eagles.ewu.edu" method="POST">
+
+				<label for="name">Name</label>
+				<input type="text" name="name"/>
+
+				<label for="email">Email</label>
+				<input type="text" name="email"/>
+
+				<input type="submit" value="Hello"/>
+				</form>
+			</section>
+		</aside>
+	</body>
+
+	<footer>
+		<h6>© Matthew Scott Jett 2017</h6>
+	</footer>
+</main>
 </html>

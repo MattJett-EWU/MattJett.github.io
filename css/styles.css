@@ -1,8 +1,22 @@
-img.profile-image {
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
+/* FONTS */
+
+
+/* LAYOUT */
+/*header*/
+header {
+	background: lightgray;
 }
-.profile-image-hover {
-    
+
+/*body*/
+body {
+	background: grey;
 }
+
+/*footer*/
+footer {
+	background: darkgray;
+}
+/* TYPOGRAPHY */
+
+
+/* BUTTONS */
