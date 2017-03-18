@@ -1,21 +1,169 @@
 /* FONTS */
-
+/*title*/
+@import url('https://fonts.googleapis.com/css?family=Vampiro+One');
+@import url('https://fonts.googleapis.com/css?family=VT323');
 
 /* LAYOUT */
+section, aside, footer, header, body, main, nav {
+	display: block;
+}
+body {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	background: black;
+	color: white;
+}
 /*header*/
-header {
-	background: lightgray;
+nav {
+	position: fixed;
+	display: flex;
+	z-index: 100;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 75px;
+	background: black;
+	color: #202020;
+	background-image: repeating-linear-gradient(
+		to bottom, 
+		#181818 0%, 
+		black 10%);
+}
+nav h1 {
+	font-size: 3.5vmax;
+	font-family: Vampiro One;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-left: 2vw;
+	text-shadow: 
+		2px 2px 0 black,
+		3px 5px 0 #101010;
+	transition: 
+		color 0.2s steps(5,end) 0s;
+}
+nav h1:hover {
+	animation: neon 1s steps(5,end) infinite alternate;
+	color: #ffffff;
+}
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+nav ul {
+	font-family: 'VT323', monospace;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	list-style-type: none;
+	max-width: 100%;
+}
+nav li {
+	min-width: 6em;
+	height: 100%;
+}
+#header-nav a:link {
+	color: #888888;
+	text-shadow: -0.5px -0.5px 0.5px #d8d8d8;
+	font-size: 2.5em;
+	padding: 10px 10px;
+	margin: 0px 20px;
+	letter-spacing: 3px;
+	text-decoration: none;
+	background-size: 1500px;
+	background-position: center;
+	transition: 
+		text-shadow 0.5s ease 0.2s,
+		color 0.5s ease 0.2s;
+}
+#header-nav a:visited {
+	color: deeppink;
+}
+#header-nav a:hover {
+	text-shadow: 
+		8px 8px 2px rgba(255,40,255,0.5), 
+		-8px -8px 2px rgba(0, 128, 255, 0.7),
+		0px 0px 10px white,
+		30px 0 10px indigo,
+		-30px 0 10px indigo;
+	color: white;
+}
+
+#main_image {
+	overflow: hidden;
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+	border: 0;
+	top: 0;
+	left: 0;
+	object-fit: cover;
 }
 
 /*body*/
-body {
-	background: grey;
+main {
+	background: black;
+	color: fuchsia;
 }
+#who-what {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+#who {
+	order: 1;
+}
+#what {
+	order: 2;
+}
+#where {
+	order: 3;
+	justify-content: center;
+	align-self: flex-end;
+}
+
+
+/*contact*/
+aside {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	min-height: 300px;
+	align-content:flex-end;
+}
+form {
+	min-width: 300px;
+	min-height: 300px;
+}
+
 
 /*footer*/
 footer {
-	background: darkgray;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	width: 100%;
 }
+footer p {
+	display: flex;
+	width: 100%;
+	background: black;
+	justify-content: center;
+}
+
+
 /* TYPOGRAPHY */
 
 

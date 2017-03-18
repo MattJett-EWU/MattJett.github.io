@@ -13,77 +13,66 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
-<main>
+<body>
 	<header>
-		<h1>Matt Jett</h1>
+		<!-- Navigation -->
+		<nav role="navigation">
+			<h1 id="title">Matt Jett</h1>
+			<ul id="header-nav">
+				<!-- nav to top of home page -->
+				<li id="nav-who"><a href="index.html">Who</a></li>
+				<!-- nav to middle of home page -->
+				<li id="nav-what"><a href="bio.html">What</a></li>
+				<!-- nav to middle of home page -->
+				<li id="nav-where"><a href="goals.html">Where</a></li>
+				<!-- opens new window link to portfolio page -->
+				<li id="nav-why"><a href="portfolio.html">Why</a></li>
+				<!-- nav to bottom of home page -->
+				<li id="nav-when"><a href="contact.html">When</a></li>
+			</ul>
+		</nav>
+		<img id="main_image" src="img/wp_desktop.jpg" alt="background_image">
 	</header>
 	
-	<body>
-		<!-- Background Image -->
-		<article>
-			<section>
-				<img src="" alt="">
-			</section>			
-		</article>
-		
+	<main>
 		<!-- Part I (bio + resume) -->
-		<article>
-			<section>
-				<h2>Who Am I?</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque a fugiat tempore obcaecati inventore enim repellat iusto debitis perspiciatis dolorum rerum et, cumque, fugit quae! Voluptatem, recusandae hic eos inventore.</p>
+		<section class="bio">
+			<section id="who-what">
+				<section id="who">
+					<h2>Who Am I?</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque a fugiat tempore obcaecati inventore enim repellat iusto debitis perspiciatis dolorum rerum et, cumque, fugit quae! Voluptatem, recusandae hic eos inventore.</p>
+				</section>
+
+				<section id="what">
+					<h2>What Have I Done?</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci reiciendis iste, modi dignissimos reprehenderit alias. Autem tempore, hic voluptas ducimus placeat, illo repellendus consequuntur, excepturi corporis harum adipisci sunt!</p>
+				</section>
 			</section>
 
-			<section>
-				<h2>What Have I Done?</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci reiciendis iste, modi dignissimos reprehenderit alias. Autem tempore, hic voluptas ducimus placeat, illo repellendus consequuntur, excepturi corporis harum adipisci sunt!</p>
-			</section>
-		</article>
-		
-		<!-- Part II (afterwards) -->
-		<article>
-			<section>
+			<!-- Part II (afterwards) -->
+			<section id="where">
 				<h2>Where to Now?</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste eligendi in, saepe quae illum, inventore hic temporibus soluta fuga ex corporis magnam. Consectetur officiis et quas suscipit consequuntur odit incidunt?</p>
 			</section>
-		</article>
-		
-		<!-- Navigation -->
-		<aside>
-			<nav>
-				<ul>
-					<!-- top of home page -->
-					<li><a href="index.html">Who?</a></li>
-					<!-- left middle of home page -->
-					<li><a href="bio.html">What?</a></li>
-					<!-- right middle of home page -->
-					<li><a href="goals.html">Where?</a></li>
-					<!-- link to portfolio page -->
-					<li><a href="portfolio.html">Why?</a></li>
-					<!-- bottom of home page -->
-					<li><a href="contact.html">When?</a></li>
-				</ul>
-			</nav>
-		</aside>
-		
+		</section>
+
 		<!-- Contact Form -->
-		<aside>
-			<section>
-				<form action="https://formspree.io/matthew.jett@eagles.ewu.edu" method="POST">
+		<aside id="contact">
+			<form role="form" action="https://formspree.io/matthew.jett@eagles.ewu.edu" method="POST">
 
-				<label for="name">Name</label>
-				<input type="text" name="name"/>
+			<label for="name">Name</label>
+			<input type="text" name="name"/>
 
-				<label for="email">Email</label>
-				<input type="text" name="email"/>
+			<label for="email">Email</label>
+			<input type="text" name="email"/>
 
-				<input type="submit" value="Hello"/>
-				</form>
-			</section>
+			<input type="submit" value="Hello"/>
+			</form>
 		</aside>
-	</body>
+	</main>
 
-	<footer>
-		<h6>© Matthew Scott Jett 2017</h6>
+	<footer id="credit" role="contentinfo">
+		<p>© Matthew Scott Jett 2017</p>
 	</footer>
-</main>
+</body>
 </html>
