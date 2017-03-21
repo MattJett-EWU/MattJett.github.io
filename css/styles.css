@@ -10,12 +10,17 @@
 	font-family: 'outrun';
 		src: url('../fonts/Outrun future Bold Italic.otf');
 }
+@font-face {
+	font-family: 'true-crimes';
+		src: url('../fonts/true-crimes.ttf');
+}
 
 /* LAYOUT */
 section, aside, footer, header, body, main, nav {
 	display: block;
 }
 body {
+	box-sizing: content-box;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -27,14 +32,17 @@ body {
 }
 /*header*/
 header {
-	background-image: url(../img/bg.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%;
 	width: 100vw;
 	height: 100vh;
 }
-
+/*bg image*/
+.bg {
+	position: absolute;
+	width: 100vw;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
 nav {
 	position: fixed;
 	display: flex;
@@ -53,7 +61,7 @@ nav {
 nav h1 {
 	font-size: 3.0vmax;
 	font-family: 'outrun';
-/*	text-transform: uppercase;*/
+	font-variant: small-caps;
 	letter-spacing: 3px;
 	margin-left: 2vw;
 	text-shadow: 
@@ -66,16 +74,16 @@ nav h1:hover {
 	animation: neon 1s steps(5,end) infinite alternate;
 	color: #ffffff;
 }
+/*animations*/
 @keyframes neon {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
-  }
+  	from {
+    	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  	}
+  	to {
+    	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  	}
 }
 nav ul {
-/*	font-family: 'VT323', monospace;*/
 	font-family: 'dotty';
 	display: flex;
 	flex-flow: row nowrap;
@@ -89,7 +97,7 @@ nav ul {
 nav li {
 	min-width: 6em;
 	height: 100%;
-	border-right: 0.3px solid grey;
+	border-right: 0.5px solid #282d33;
 }
 #header-nav a:link, #header-nav a:visited {
 	color: #555;
@@ -121,6 +129,9 @@ nav li {
 main {
 	background: black;
 	color: fuchsia;
+	font-family: 'VT323', monospace;
+	font-size: 1.3em;
+	line-height: 25px;
 }
 #who-what {
 	display: flex;
@@ -131,29 +142,175 @@ main {
 }
 #who {
 	order: 1;
+	width: 30vw;
+	background: blue;
 }
 #what {
 	order: 2;
+	width: 70vw;
+	background: yellow;
 }
 #where {
 	order: 3;
 	justify-content: center;
 	align-self: flex-end;
+	width: 100vw;
+	background: green;
 }
+
+
 
 
 /*contact*/
 aside {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	min-height: 300px;
-	align-content:flex-end;
+	display: block;
+	width: 70%;
+	margin: 10% auto;
 }
 form {
-	min-width: 300px;
+	background-image: repeating-linear-gradient(
+		to bottom, 
+		#181818 0%, 
+		black 2.5%);
+	font-size: 1.5em;
 	min-height: 300px;
+	border: 2px solid #363636;
+	border-radius: 10px;
+	box-shadow: 0 10px 40px -10px #414141;
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1em;
 }
+.content-box {
+	margin: 25px auto;
+	
+}
+.content-box label {
+	margin-bottom: 8px;
+}
+label {
+	display: inline-flex;
+	width: 70px;
+	padding: 5px;
+	background: black;
+	border: 2px solid #1b242c;
+	justify-content: center;
+	border-radius: 10px;
+	margin: auto;
+	color: fuchsia;
+	box-shadow: 0 5px 20px -10px rgba(50,50,50,0.5);
+	transition: 
+		box-shadow 0.5s ease 0.2s,
+		color 0.5s ease 0.2s;
+}
+label:hover {
+	box-shadow: 
+		8px 8px 5px rgba(255,40,255,0.1), 
+		-8px -8px 5px rgba(0, 128, 255, 0.2),
+		0px 0px 30px rgba(255,255,255,0.3),
+		40px 0 30px rgba(75,0,130,0.3),
+		-40px 0 30px rgba(75,0,130,0.3);
+}
+#message-box {
+	margin: auto;
+}
+#message-box label {
+	margin-bottom: 8px;
+}
+textarea {
+	display: flex;
+	border-radius: 5px;
+	border: none;
+	width: 100%;
+	height: 150px;
+	overflow: auto;
+	font-size: 0.8em;
+	text-align: left;
+	background: #151515;
+	color: white;
+	box-shadow: inset 0 -15px 30px -20px rgba(100,100,100,0.2),inset 0 15px 30px -20px rgba(0,0,0,0.9);
+	transition: 
+		text-shadow 1s ease 0.2s,
+		color 1s ease 0.2s;
+}
+textarea:focus {
+	outline: 0;
+	background: black;
+}
+
+input[type="text"]:focus {
+	outline: 0;
+	background: black;
+	text-shadow: 
+		8px 8px 2px rgba(255,40,255,0.5), 
+		-8px -8px 2px rgba(0, 128, 255, 0.7),
+		0px 0px 10px white,
+		30px 0 10px indigo,
+		-30px 0 10px indigo;
+	color: white;
+}
+#label-message {
+	width: auto;
+	margin: 25px;
+}
+input {
+	background: #151515;
+	margin: auto;
+	box-shadow: 0 9px 20px -10px rgba(77, 77, 77, 0.5);
+}
+input[type="text"] {
+	border: 0;
+	border-radius: 5px;
+	margin: auto;
+	width: auto;
+	text-align: center;
+	color: white;
+	transition: 
+		text-shadow 1s ease 0.2s,
+		color 1s ease 0.2s;
+}
+input[type="text"]:focus {
+	outline: 0;
+	background: black;
+	text-shadow: 
+		8px 8px 2px rgba(255,40,255,0.5), 
+		-8px -8px 2px rgba(0, 128, 255, 0.7),
+		0px 0px 10px white,
+		30px 0 10px indigo,
+		-30px 0 10px indigo;
+	color: white;
+}
+#submit_button {
+	width: 100%;
+	padding: 15px;
+}
+input[type="submit"] {
+	font-family: 'true-crimes';
+	background: #000000;
+	color: #222222;
+	display: block;
+	cursor: pointer;
+	border-radius: 100% 10%;
+	border-top-color: #002243;
+	border-bottom-color: #460046;
+	border-left-color: #002243;
+	border-right-color: #460046;
+	padding: 0.8em 2em;
+	margin-top: 1em;
+	transition: 
+		color 0.2s steps(5,end) 0.0s, 
+		background 0.8s steps(5,end) 0.0s;
+}
+input[type="submit"]:hover {
+	animation: neon 1s steps(5,end) infinite alternate;
+	color: #ffffff;
+	border-color: fuchsia;
+	background: #000977;
+}
+
 
 
 /*footer*/
@@ -164,14 +321,10 @@ footer {
 	width: 100%;
 }
 footer p {
+	color: #484848;
 	display: flex;
+	font-variant: small-caps;
 	width: 100%;
 	background: black;
 	justify-content: center;
 }
-
-
-/* TYPOGRAPHY */
-
-
-/* BUTTONS */

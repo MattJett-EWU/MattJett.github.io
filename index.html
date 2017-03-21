@@ -15,6 +15,7 @@
 
 <body>
 	<header>
+		<img class="bg" src="/img/bg.png" alt="background image">
 		<!-- Navigation -->
 		<nav role="navigation">
 			<h1 id="title">Matt Jett</h1>
@@ -59,13 +60,24 @@
 		<aside id="contact">
 			<form role="form" action="https://formspree.io/matthew.jett@eagles.ewu.edu" method="POST">
 
-			<label for="name">Name</label>
-			<input type="text" name="name"/>
-
-			<label for="email">Email</label>
-			<input type="text" name="email"/>
-
-			<input type="submit" value="Hello"/>
+			<div class="content-box">
+				<label for="name">Name</label>
+				<input type="text" name="name"/>
+			</div>
+			
+			<div class="content-box">
+				<label for="email">Email</label>
+				<input type="text" name="email"/>
+			</div>
+			
+			<div id="message-box">
+				<label id="label-message" for="message">What do you think?</label>
+				<textarea name="message" id="text-box" cols="30" rows="10"></textarea>
+			</div>
+			
+			<div id="submit_button">
+				<input type="submit" value="Say Hello"/>
+			</div>
 			</form>
 		</aside>
 	</main>
