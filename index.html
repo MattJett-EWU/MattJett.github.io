@@ -9,37 +9,41 @@
     <!-- Normalize -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	
+	<!-- Media Queries -->
+	<link rel="stylesheet" href="css/media.css">
 	<!-- My Styles -->
 	<link rel="stylesheet" href="css/styles.css">
+	
 </head>
 
 <body>
 	<header>
-		<img class="bg" src="/img/bg.png" alt="background image">
+		<img class="bg" src="/img/Untitled1.gif" alt="background image">
 		<!-- Navigation -->
 		<nav role="navigation">
 			<h1 id="title">Matt Jett</h1>
 			<ul id="header-nav">
 				<!-- nav to top of home page -->
-				<li id="nav-who"><a href="index.html">Who</a></li>
+				<li id="nav-who"><a href="#who">Who</a></li>
 				<!-- nav to middle of home page -->
-				<li id="nav-what"><a href="bio.html">What</a></li>
+				<li id="nav-what"><a href="#what">What</a></li>
 				<!-- nav to middle of home page -->
-				<li id="nav-where"><a href="goals.html">Where</a></li>
+				<li id="nav-where"><a href="#where">Where</a></li>
 				<!-- opens new window link to portfolio page -->
 				<li id="nav-why"><a href="portfolio.html">Why</a></li>
 				<!-- nav to bottom of home page -->
-				<li id="nav-when"><a href="contact.html">When</a></li>
+				<li id="nav-when"><a href="#when">When</a></li>
 			</ul>
 		</nav>
 	</header>
 	
 	<main>
-		<!-- Part I (bio + resume) -->
 		<section class="bio">
+			<!-- Part I (bio + resume) -->
 			<section id="who-what">
 				<section id="who">
 					<h2>Who Am I?</h2>
+					<div id="profile-image"></div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque a fugiat tempore obcaecati inventore enim repellat iusto debitis perspiciatis dolorum rerum et, cumque, fugit quae! Voluptatem, recusandae hic eos inventore.</p>
 				</section>
 
@@ -57,9 +61,13 @@
 		</section>
 
 		<!-- Contact Form -->
-		<aside id="contact">
-			<form role="form" action="https://formspree.io/matthew.jett@eagles.ewu.edu" method="POST">
+		<aside>
+			<form id="when" role="form" action="https://formspree.io/matthew.jett@eagles.ewu.edu" method="POST">
 
+			<div id="contact-title">
+				<h2>Contact Me!</h2>
+			</div>
+		
 			<div class="content-box">
 				<label for="name">Name</label>
 				<input type="text" name="name"/>
