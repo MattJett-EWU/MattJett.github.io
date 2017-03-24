@@ -46,7 +46,7 @@ nav {
 	position: fixed;
 	display: flex;
 	z-index: 100;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	width: 100vw;
 	height: 75px;
@@ -62,7 +62,8 @@ nav h1 {
 	font-family: 'outrun';
 	font-variant: small-caps;
 	letter-spacing: 3px;
-	margin-left: 2vw;
+	margin: auto;
+	margin-left: 15px;
 	text-shadow: 
 		2px 2px 0 black,
 		3px 5px 0 #101010;
@@ -93,8 +94,6 @@ nav h1:hover {
 nav ul {
 	font-family: 'dotty';
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
 	align-content: center;
 	align-items: center;
 	text-transform: uppercase;
@@ -391,7 +390,24 @@ input[type="submit"]:hover {
 	background: #000daf;
 }
 
-
+/*topnavbutton*/
+#top-nav-icon {
+	z-index: 105;
+	height: 50px;
+	width: 110px;
+	display: block;
+	cursor: pointer;
+	background-image: url(../img/top_nav_button2.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: -5px auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 113px;
+}
 
 /*footer*/
 footer {
@@ -416,4 +432,8 @@ footer p {
 	padding: 9px 30px;
 	background: black;
 	justify-content: flex-end;
+	background-image: repeating-linear-gradient(
+		to bottom, 
+		#181818 0%,
+		black 17%);
 }

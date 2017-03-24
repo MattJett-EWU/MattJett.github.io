@@ -8,6 +8,34 @@
   and (max-width: 47.9375em)  { 
     
 	/* Diagnostic Styling. Delete When Done. */
+	  
+	  
+	#header-nav {
+		visibility: hidden;
+		width: 100%;
+	} 
+	nav #title {
+		margin: -250px;
+		max-width: 260px;
+		font-size: 3.7vh;
+	}
+	#hamburger-menu {
+		position: absolute;
+		visibility: visible;
+		cursor: pointer;
+		transform: scale(0.3);
+		background-image: url(../img/hamburger-menu.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		min-height: 150px;
+		min-width: 210px;
+		right: -35px;
+	}
+	  #hamburger-menu:hover {
+		  color: fuchsia;
+	  }
+	  
 	body:before {
 		z-index: 101;
 	   background: yellow;
@@ -60,6 +88,10 @@
 	  	position: fixed;
   }
 
+	  #hamburger-menu {
+		visibility: hidden;
+	}
+	  
 	#who #profile-image {
 	width: 200px;
 	height: 200px;
@@ -83,6 +115,11 @@
        content: "Desktop Size";
 	  	position: fixed;
   }
+	
+	
+	#hamburger-menu {
+		visibility: hidden;
+	}
 
 	#who #profile-image {
 	width: 300px;
