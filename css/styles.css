@@ -23,8 +23,8 @@ body {
 	box-sizing: content-box;
 	display: block;
 	flex-wrap: wrap;
-	width: 100vw;
-	max-width: 100vw;
+	width: 100%;
+	max-width: 100%;
 	margin: 0;
 	padding: 0;
 	background-image: url(../img/black_carpet.png);
@@ -35,15 +35,16 @@ body {
 }
 /*header*/
 header {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 }
 /*bg image*/
 header .bg {
 	position: absolute;
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	object-fit: cover;
+    box-shadow: -10px 0px 30px 10px black;
 }
 nav {
 	position: fixed;
@@ -51,10 +52,11 @@ nav {
 	z-index: 100;
 	justify-content: flex-end;
 	align-items: center;
-	width: 100vw;
+	width: 100%;
 	height: 75px;
 	background: black;
 	color: #202020;
+    box-shadow: -5px 0px 30px 5px black;
 	background-image: repeating-linear-gradient(
 		to bottom, 
 		#181818 0%, 
@@ -101,7 +103,7 @@ nav ul {
 	align-items: center;
 	text-transform: uppercase;
 	list-style-type: none;
-	max-width: 100vw;
+	max-width: 100%;
 }
 nav li {
 	min-width: 6em;
@@ -140,12 +142,11 @@ main {
     background-size: contain;
     background-repeat: repeat;
     background-position: center;
-	
 	color: fuchsia;
 	font-family: 'VT323', monospace;
 	font-size: 1.3em;
 	line-height: 25px;
-	width: 100vw;
+	width: 100%;
 }
 #profile-image {
 	margin: 30px auto;
@@ -158,10 +159,11 @@ main {
 	display: flex;
 	flex-flow: row nowrap;
 	margin: 80px 0;
+    box-shadow: -10px 0px 30px 10px black;
 }
 #who {
 	order: 1;
-	width: 30vw;
+	width: 30%;
 	color: #888;
 	word-spacing: 1px;
 	background-image: repeating-linear-gradient(
@@ -179,7 +181,7 @@ abbr[title] {
 
 #what {
 	order: 2;
-	width: 70vw;
+	width: 70%;
 	word-spacing: 1px;
 	background-image: 
 		linear-gradient(to right, rgba(0, 15, 134, 0.0) 30%, #86008b),
@@ -204,17 +206,16 @@ abbr[title] {
 
 
 #where {
-	order: 3;
 	word-spacing: 1px;
 	justify-content: center;
-	align-self: flex-end;
 	background-image: repeating-linear-gradient(
 		to bottom, 
 		#181818 0%, 
 		black 2.5%);
 	padding: 1.5em;
+    box-shadow: -10px 0px 30px 10px black;
 }
-#who h2, #what h2, #where h2 {
+#who h2, #what h2, #where h2, #why h2 {
 	text-align: center;
 	letter-spacing: 1px;
 	color: #ffffff;
@@ -231,6 +232,24 @@ abbr[title] {
 		0px 0px 13px rgba(255,255,255,0.4),
 		40px 0 5px rgba(75,0,130,0.5),
 		-40px 0 5px rgba(75,0,130,0.5);
+}
+#why {
+    height: 55px;
+    width: 100%;
+    margin: 80px auto;
+    padding-top: 6px;
+    background-image: repeating-linear-gradient(
+		to bottom, 
+		#181818 0%, 
+		black 20%);
+    box-shadow: 
+        0 0 10px 3px rgba(255, 255, 255, 0.999),
+        0 0 50px 10px rgba(0, 29, 255, 1),
+        0 0 100px 25px rgba(255, 0, 255, 0.6);
+}
+#why h2 {
+    width: 30%;
+    text-transform: uppercase;
 }
 
 
@@ -250,7 +269,7 @@ form {
 	min-height: 300px;
 	border: 2px solid #363636;
 	border-radius: 10px;
-	box-shadow: 0 10px 40px -10px #414141;
+	box-shadow: 0 10px 40px -10px black;
 	text-align: center;
 	margin: auto;
 	width: 100%;
@@ -263,7 +282,7 @@ form {
 	font-style: italic;
 	margin: 1em auto 0.5em auto;
 	padding: 0px 1em;
-	width: 100vw;
+	width: 100%;
 	line-height: 35px;
 	background-image: repeating-linear-gradient(
 		to bottom, 
@@ -446,25 +465,27 @@ footer {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	margin: -1.7vh;
-	padding: 10px;
+
 	display: flex;
 	height: 6%;
 	flex-direction: row;
 	overflow: hidden;
-	width: 100vw;
+	width: 100%;
 }
+
 footer p {
 	color: #484848;
 	display: flex;
+    font-size: 0.7em;
 	font-variant: small-caps;
 	width: 100%;
 	height: 100%;
-	padding: 9px 30px;
+	padding: 12px 1%;
 	background: black;
 	justify-content: flex-end;
 	background-image: repeating-linear-gradient(
 		to bottom, 
 		#181818 0%,
 		black 17%);
+    box-shadow: 0px 0px 30px 0px black;
 }
